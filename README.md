@@ -1,3 +1,3 @@
 # Homework
 Code Academy first part test
-Game "Scissors, rock, paper"
+Game "Quiz game Yes/NO"
