@@ -1,12 +1,16 @@
+from questions import question_dict
+
 class Question:
-    def __init__(self, answer: str, question:str) ->str:
+    def __init__(self, answer: str, question:str) -> None:
+
         self.question = question
         self.answer = answer
 
+    def ask_answer(self)->str:
+       
+        return self.question
 
-    def get_question_and_answer(self)->str:
-      
-        print(self.question)
+    def get_answer (self)->str:
 
         while True:
             user_answer = input("Enter 'y' for Yes or 'n' for No: ")
@@ -16,16 +20,20 @@ class Question:
             else:
                 print("Invalid input. Please enter 'y' or 'n'.")
         
-
-class PlayQuiz:
+class Quiz:
     def __init__(self, questions_dict: dict) -> None:
         self.questions_dict = questions_dict
         self.score = 0
 
     def start_game (self) -> None:
+        
         for question, answer in self.questions_dict.items():
-            ask_answer = Question(question=question, answer=answer)
-            user_answer = ask_answer.get_question_and_answer()
+            
+            question = Question(question=question, answer=answer)
+
+            print(question.ask_answer())
+            
+            user_answer = question.get_answer()
 
             if user_answer == answer:
                 print("Correct!")
@@ -35,14 +43,6 @@ class PlayQuiz:
 
         print("Final score:", self.score)
    
-question_dict = {
-    "Is the earth round?": "y",
-    "Does the city Crimea belongs to Ukraina": "y",
-    "Is it true that you can't touch the elbow with your tongue?" : "n",
-    "Is the city Siauliai capital of Lithuania?": "n",
-    "Is Lithuania language harder to learn than Python":"n"
-}
 
-
-quiz = PlayQuiz(questions_dict=question_dict) 
+quiz = Quiz(questions_dict=question_dict) 
 quiz.start_game()
