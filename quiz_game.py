@@ -31,7 +31,7 @@ class Quiz:
             
             question = Question(question=question, answer=answer)
 
-            print(question.ask_answer())
+            print(question.ask_question())
             
             user_answer = question.get_answer()
 
