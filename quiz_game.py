@@ -6,7 +6,7 @@ class Question:
         self.question = question
         self.answer = answer
 
-    def ask_answer(self)->str:
+    def ask_question(self)->str:
        
         return self.question
 
@@ -21,27 +21,32 @@ class Question:
                 print("Invalid input. Please enter 'y' or 'n'.")
         
 class Quiz:
+
     def __init__(self, questions_dict: dict) -> None:
+        
         self.questions_dict = questions_dict
-        self.score = 0
+        
 
     def start_game (self) -> None:
-        
+    
+        self.score = 0
+
         for question, answer in self.questions_dict.items():
             
             question = Question(question=question, answer=answer)
 
-            print(question.ask_answer())
+            print(question.ask_question())
             
             user_answer = question.get_answer()
-
+            
             if user_answer == answer:
+
                 print("Correct!")
                 self.score += 1
             else:
                 print("Incorrect.")
 
-        print("Final score:", self.score)
+        print("Thanks for playing, your final is score:", self.score)
    
 
 quiz = Quiz(questions_dict=question_dict) 
