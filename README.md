@@ -13,7 +13,6 @@ What the project does:
 3. Program checks if answe is correct or no.
 4. Program sums up scores of correct answer and prints it out for user.
 
-
 Why the project is useful for:
 
 First of all, to have fun by trying to guess right answer.
@@ -21,7 +20,7 @@ Second, it might be usefull for begginers in Python programming, to learn some c
 
 How to start:
 
-Run quiz.py file in terminal
+Run quiz_game.py file in terminal
 
 
 
