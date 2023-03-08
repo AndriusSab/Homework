@@ -6,7 +6,7 @@ class Question:
         self.question = question
         self.answer = answer
 
-    def ask_answer(self)->str:
+    def ask_question(self)->str:
        
         return self.question
 
