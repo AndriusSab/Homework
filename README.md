@@ -3,7 +3,8 @@
 Console "Quiz game Yes/NO"
 
 Hi, 
-thanks for checking this. This is my first console program project in CodeAcademy school. Don't judge me: this is small step for everyone and big one personaly for me :)
+thanks for checking this. 
+This is my first console program project in CodeAcademy school. Don't judge me: this is small step for everyone and big one personaly for me :)
 
 What the project does:
 
